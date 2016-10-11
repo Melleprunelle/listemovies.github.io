@@ -8,7 +8,7 @@ var app = angular.module("StyleFilms", []);
 app.controller("styleFilms", function ($scope) {
     $scope.movies = [
         {
-            id: 1,
+            id: 4,
             title: "Avatar",
             releaseYear: "2010",
             img: "img/avatar.jpg",
@@ -18,7 +18,7 @@ app.controller("styleFilms", function ($scope) {
             /*rate: "3"*/
     },
         {
-            id: 2,
+            id: 3,
             title: "Seigneur des Anneaux : La Communauté de l'Anneau",
             releaseYear: "2003",
             img: "img/seigneurdesanneaux1.jpg",
@@ -28,7 +28,7 @@ app.controller("styleFilms", function ($scope) {
             /*rate: "5"*/
     },
         {
-            id: 3,
+            id: 2,
             title: "The Grudge",
             releaseYear: "2004",
             img: "img/thegrudge.jpg",
@@ -38,7 +38,7 @@ app.controller("styleFilms", function ($scope) {
             /*rate: "4"*/
     },
         {
-            id: 4,
+            id: 1,
             title: "Yip Man 2",
             releaseYear: "2010",
             img: "img/yipman.jpg",

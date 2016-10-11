@@ -16,12 +16,11 @@ body {
     padding-left: 0px;
 }
 
-header input {
+input {
     border-radius: 0px;
     border: 1px solid coral;
     padding: 5px;
     color: coral;
-    opacity: 0.5;
     width: 216px;
 }
 
@@ -87,7 +86,21 @@ input::-webkit-inner-spin-button {
 }
 
 .caption {
-    padding-left: 40px;
+    padding-left: 50px;
+}
+
+.caption i {
+    padding-right: 75px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.fa-thumbs-up {
+    color: forestgreen;
+}
+
+.fa-thumbs-down {
+    color: firebrick;
 }
 
 .caption > p > div {

@@ -10,9 +10,12 @@
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome.css">
 
     <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
 </head>
 
@@ -42,7 +45,8 @@
         </header>
 
         <ul class="thumbnails col-md-offset-2 col-md-8" ng-app="StyleFilms" ng-controller="styleFilms">
-            <li class="movieResult col-md-12" class="span12" ng-repeat="movies in movies">
+            <input type="text" placeholder="rechercher un film par titre" ng-model="listefilm">
+            <li class="movieResult col-md-12" class="span12" ng-repeat="movies in movies | filter:listefilm">
                 <img ng-src="{{movies.img}}" class="span2 col-md-3">
                 <div class="caption col-md-9">
                     <h3>{{movies.title}}</h3>
@@ -50,6 +54,10 @@
                     <p><b>Réalisateur : </b>{{movies.directors}}</p>
                     <p><b>Acteurs : </b>{{movies.actors}}</p>
                     <p><b>Synopsis : </b>{{movies.synopsis}}</p>
+                    <i class="fa fa-thumbs-up col-md-1" aria-hidden="true" ng-click="aime = aime + 1" ng-init="aime=0">{{aime}}</i>
+
+                    
+                    <i class="fa fa-thumbs-down col-md-1" aria-hidden="true" ng-click="aimepas = aimepas + 1" ng-init="aimepas=0">{{aimepas}}</i>
                 </div>
             </li>
         </ul>
